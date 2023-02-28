@@ -1,4 +1,4 @@
-# Laravel 8 模型庫存管理工具
+# Laravel 10 模型庫存管理工具
 
 引入 appstract 的 laravel-stock 套件來擴增追蹤模型上的庫存數量，可以增加、減少、清除和設置庫存。還可以檢查模型是否有庫存（在特定日期／時間）。
 
@@ -12,7 +12,7 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
 ```
@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/qEHEcRd.png)
+![](https://i.imgur.com/gvwTRrp.png)
 > 若想要生意越做越好版圖越來越大，學會有效的控管庫存是一條必經的路，尤其是佈局多通路時，清楚掌握網店、實體門市、銷售通路的各自訂單與庫存會變成一個全新的挑戰
