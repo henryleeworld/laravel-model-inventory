@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Appstract\Stock\HasStock;
+use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
@@ -11,15 +11,20 @@ class Product extends Model
 
     public $table = 'products';
 
-    protected $dates = [
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'name',
+        'price',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
 
-    protected $fillable = [
-        'name',
-        'price',
+    protected $dates = [
         'created_at',
         'updated_at',
         'deleted_at',

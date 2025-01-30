@@ -7,22 +7,25 @@ use Illuminate\Database\Seeder;
 
 class ProductsTableSeeder extends Seeder
 {
-    public function run()
+    /**
+     * Run the database seeders.
+     */
+    public function run(): void
     {
         $products = [
             [
                 'id'         => 1,
-                'name'      => 'PS4《Final Fantasy VII Remake FF7重製版》中文版',
-                'price'      => 1790,
-                'created_at' => '2020-04-02 19:31:45',
-                'updated_at' => '2020-04-02 19:31:45',
+                'name'       => __('Rise of the Ronin (Traditional Chinese) - PS5'),
+                'price'      => 1990,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'id'         => 2,
-                'name'       => 'PS4《仁王2 (NIOH 2)》一般版',
-                'price'      => 1790,
-                'created_at' => '2020-04-02 19:31:45',
-                'updated_at' => '2020-04-02 19:31:45',
+                'name'       => __('Final Fantasy VII Rebirth (Traditional Chinese) - PS5'),
+                'price'      => 1880,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ];
 

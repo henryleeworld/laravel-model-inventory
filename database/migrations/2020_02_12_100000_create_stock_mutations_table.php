@@ -8,16 +8,14 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create(config('stock.table'), function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->morphs('stockable');
             $table->string('reference_type')->nullable();
-            $table->unsignedBigInteger('reference_id')->nullable();
+            $table->foreignId('reference_id')->nullable();
             $table->integer('amount');
             $table->text('description')->nullable();
             $table->timestamps();
@@ -28,10 +26,8 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists(config('stock.table'));
     }
